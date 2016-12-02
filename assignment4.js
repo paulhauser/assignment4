@@ -28,6 +28,7 @@
     console.log("error");
   });
 
+  // Second ajax request to get comics data
   $.ajax({
     url: 'http://www.mattbowytz.com/simple_api.json?data=comics',
     method: 'GET'
@@ -56,7 +57,8 @@
     var predicted = false;
 
 
-    // Generate list of words that can be predicted with current string
+    // Generate object of words that can be predicted with current string
+    // sorted by category, each category an array
     if(searchString.length > 0) {
       for(var topic in allTopics) {
         predictedStrings[topic] = [];
@@ -113,6 +115,15 @@
       $('.flexsearch-predictions').show();
 
     }
+  });
+
+  // Google search for string is in the input box on submit
+  $( ".flexsearch-form" ).on("submit", function() {
+    var searchString = 'http://www.google.com/#q='
+      + $('.flexsearch-input').val();
+
+      window.location.href = searchString;
+      return false;
   });
 
 })();
