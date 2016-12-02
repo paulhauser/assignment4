@@ -1,6 +1,6 @@
 /*
   Don't forget to style the results from the search!
-  And anything elese you add to the application, for that matter.
+  And anything else you add to the application, for that matter.
 */
 
 .flexsearch-wrapper {
@@ -78,6 +78,20 @@
 .flexsearch-submit:hover {
   color: #333;
   cursor: pointer;
+}
+
+.flexsearch-predictions {
+  font-family: 'Helvetica', sans-serif;
+  padding: 15px 46px;
+}
+
+div.flexsearch-predictions ul {
+  list-style: none;
+}
+
+div.flexsearch-predictions li a{
+  text-decoration: none;
+  color: blue;
 }
 
 ::-webkit-input-placeholder {
